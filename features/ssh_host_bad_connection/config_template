@@ -1,0 +1,6 @@
+Host <host_alias>
+    HostName <host_address>
+    User <user>
+    TCPKeepAlive yes
+    ServerAliveCountMax 1
+    ServerAliveInterval 5
