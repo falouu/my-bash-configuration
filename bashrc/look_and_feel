@@ -1,0 +1,7 @@
+# terminal customization
+export PS1='\u:_/\W$ '
+PATH=${PATH}:/usr/local/go/bin:/opt/go/gocode/bin
+
+## colored ls
+eval $(dircolors -b)
+alias ls='ls --color=auto'
