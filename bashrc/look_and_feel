@@ -4,7 +4,7 @@
 export PS1="\u\[$(tput sgr0)\]\[\033[38;5;10m\]@\[$(tput sgr0)\]\h\[$(tput sgr0)\]\[\033[38;5;10m\]:\[$(tput sgr0)\]\[\033[38;5;15m\]\W\[$(tput sgr0)\]\[\033[38;5;10m\]\\$\[$(tput sgr0)\]\[\033[38;5;10m\] \[$(tput sgr0)\]"$
 
 #xterm and gnome terminal title customization
-PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME}:`basename "${PWD}"`\007"'$
+PROMPT_COMMAND='history -a; echo -ne "\033]0;${HOSTNAME}:`basename "${PWD}"`\007"'$
 
 #path
 PATH=${PATH}:/usr/local/go/bin:/opt/go/gocode/bin
