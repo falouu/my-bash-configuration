@@ -2,16 +2,36 @@
 # append following to ~/.gitconfig file:
 
 [push]
-	default = current
+    default = current
 [core]
-	editor = vima
+    editor = vima
 
 [merge]
     tool = intellij
 [mergetool "intellij"]
     cmd = /opt/idea-IU-141.178.9/bin/idea.sh merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
-   trustExitCode = true
+    trustExitCode = true
 [diff]
-   tool = intellij
+    tool = intellij
 [difftool "intellij"]
-   cmd = /opt/idea-IU-141.178.9/bin/idea.sh diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+    cmd = /opt/idea-IU-141.178.9/bin/idea.sh diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+
+
+[color "diff"]
+    whitespace = red reverse
+[alias]
+    df = diff --ws-error-highlight=all
+    s = status
+    a = add
+    au = add -u
+    d = diff
+    dc = diff --cached
+    c = commit
+    cm = commit -m 
+    l = log --decorate
+    ps = push
+    pl = pull
+    pn = push -u origin HEAD
+    m = merge
+    ru = remote update
+    ch = checkout
