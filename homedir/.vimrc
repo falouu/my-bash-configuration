@@ -5,3 +5,11 @@ set tabstop=2
 set shiftwidth=2
 " On pressing tab, insert 4 spaces
 set expandtab
+
+" The two lines below set behaviour presented in following example:"
+"   /copyright      # Case insensitive "
+"   /Copyright      # Case sensitive "
+"   /copyright\C    # Case sensitive "
+"   /Copyright\c    # Case insensitive "
+:set ignorecase
+:set smartcase
