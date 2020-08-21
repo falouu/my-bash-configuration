@@ -9,7 +9,9 @@ To install dotfiles on your host, follow these steps
 2. `alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME'`
 3. `config config --local status.showUntrackedFiles no`
 4. `echo "alias config='/usr/bin/git --git-dir=$HOME/.config/dotfiles --work-tree=$HOME'" >> $HOME/.bashrc`
-5. `config checkout <one of branches>` 
+5. `config checkout <one of branches>`
+6. `config config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*`
+7. `config branch -u origin/<one of branches>`
 
 The setup is based on the article: https://www.atlassian.com/git/tutorials/dotfiles 
 
